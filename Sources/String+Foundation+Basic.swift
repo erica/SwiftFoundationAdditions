@@ -1,6 +1,7 @@
 /*
 
 Erica Sadun, http://ericasadun.com
+Like a bridge over troubled Foundation, I will lay me down
 
 */
 
@@ -28,6 +29,19 @@ extension NSString {
         return NSRange(location: 0, length: length)
     }
 }
+
+// --------------------------------------------------
+// MARK: Trimming
+// --------------------------------------------------
+
+public extension String {
+    /// Trimming string whitespace
+    public var trimmed: String {
+        return stringByTrimmingCharactersInSet(
+            .whitespaceAndNewlineCharacterSet())
+    }
+}
+
 
 // --------------------------------------------------
 // MARK: Ranges
